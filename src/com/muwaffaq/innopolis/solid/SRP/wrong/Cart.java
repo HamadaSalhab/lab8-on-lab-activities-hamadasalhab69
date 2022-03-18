@@ -12,7 +12,7 @@ import java.util.List;
  * it should only have one reason to change
  */
 
-public class Cart {
+public class CartAdder {
 
     List<Product> products;
     double totals;
@@ -21,17 +21,21 @@ public class Cart {
     void addToCart(Product product) {
         products.add(product);
     }
+}
 
+public class CartRemover{
+    List<Product> products;
+    
     void removeFromCart(Product product) {
         products.remove(product);
     }
+}
 
+public class CartDiscounter{
+    double totals;
+    
     void applyDiscount(int percentage) {
         totals = totals * percentage;
     }
-
-
 }
-
-
 
